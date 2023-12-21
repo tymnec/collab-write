@@ -1,9 +1,9 @@
-import React from 'react'
+import React from "react";
 
 const Icon = () => {
   return (
-    <div>Icon</div>
-  )
-}
+    <p className="italic font-mono text-slate-600 font-bold mx-2">Collab Write</p>
+  );
+};
 
-export default Icon
+export default Icon;
