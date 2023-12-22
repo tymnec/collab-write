@@ -9,6 +9,7 @@ import {
 import { MenuContext } from "./sidebar";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import { UserProfile } from "@clerk/nextjs";
 
 /**
  * Renders the side menu component.
@@ -17,6 +18,8 @@ import Link from "next/link";
  */
 const SideMenu = (): JSX.Element => {
   const { open, setOpen } = React.useContext(MenuContext);
+
+  // const [userProfileOpen, setUserProfileOpen] = React.useState(false);
 
   return (
     <div className="z-20">
@@ -44,13 +47,15 @@ const SideMenu = (): JSX.Element => {
         <Separator />
 
         {/* Menu Items */}
-        <div className="text-slate-700 font-medium gap-2 flex flex-col ml-2">
+        <div className="text-slate-700 font-medium gap-2 flex flex-col ml-2 relative">
           {/* Settings */}
-          <button className="flex gap-2 place-items-center hover:bg-slate-100 p-1 rounded-full cursor-pointer focus:bg-slate-100">
-            {/* Settings Icon */}
-            <MdOutlineSettingsSuggest className="w-5 h-5" />
-            Settings
-          </button>
+          <Link href={"/settings"} className="w-full">
+            <button className="flex gap-2 place-items-center hover:bg-slate-100 p-1 rounded-full cursor-pointer focus:bg-slate-100 w-full">
+              {/* Settings Icon */}
+              <MdOutlineSettingsSuggest className="w-5 h-5" />
+              Settings
+            </button>
+          </Link>
 
           {/* Help & Feedback */}
           <Link href={"/help-and-feedback"} className="w-full">
