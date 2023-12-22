@@ -19,7 +19,7 @@ const SideMenu = (): JSX.Element => {
   const { open, setOpen } = React.useContext(MenuContext);
 
   return (
-    <div className="z-[9999]">
+    <div className="z-20">
       <motion.div
         initial={{ x: "-100%" }}
         animate={{ x: 0 }}
