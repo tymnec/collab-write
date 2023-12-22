@@ -3,9 +3,10 @@ import { Button } from "@/components/ui/button";
 import React from "react";
 import Link from "next/link";
 import { UserButton } from "@clerk/nextjs";
-import { User } from "@clerk/nextjs/server";
+import { useUser } from "@clerk/nextjs";
 
 const Navbar = () => {
+  const { user } = useUser();
   return (
     <div className="sticky bg-slate-100 w-full p-3 shadow-lg flex justify-between place-items-center rounded-full">
       {/* Icon */}
@@ -17,7 +18,7 @@ const Navbar = () => {
       {/* <div>Marketing Page</div> */}
 
       {/* Login */}
-      {User ? (
+      {user ? (
         <UserButton />
       ) : (
         <div>
