@@ -7,8 +7,8 @@ import TemplateView from "./template-view";
 
 const TemplateGallery = () => {
   return (
-    <div className="flex relative bg-slate-100 -z-10">
-      <div className="mt-[4.5rem] bg-slate-100 p-4 text-slate-800 container flex flex-col -z-10">
+    <div className="flex">
+      <div className="mt-[4.5rem] bg-slate-100 p-4 text-slate-800 w-full flex flex-col -z-10">
         {/* Top Section */}
         <div className="flex px-10 justify-between">
           <div>Start a new document</div>
